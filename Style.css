@@ -51,9 +51,10 @@
             gap: 8px;
         }
         
-        .logo i {
-            font-size: 1.6rem;
-        }
+        .logo img:last-child {
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción */
+}
         
         .header-actions {
             display: flex;
