@@ -1,0 +1,327 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        :root {
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --background: #f8f9fa;
+            --card: #ffffff;
+            --text: #202124;
+            --text-secondary: #5f6368;
+            --border: #dadce0;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --tab-active: #e8f0fe;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            padding-bottom: 70px; /* Espacio para el menú inferior */
+            overflow-x: hidden;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Cabecera */
+        header {
+            background: linear-gradient(to right, var(--primary), #0066ff);
+            color: white;
+            padding: 15px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo i {
+            font-size: 1.6rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 18px;
+        }
+        
+        .header-actions i {
+            font-size: 1.3rem;
+        }
+        
+        /* Barra de búsqueda */
+        .search-container {
+            padding: 12px 16px;
+            background-color: white;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .search-bar {
+            background-color: #f1f3f4;
+            border-radius: 24px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-bar i {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .search-bar input {
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+            color: var(--text);
+        }
+        
+        /* Contenido principal */
+        main {
+            padding: 16px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Tarjetas de aplicaciones */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .app-card {
+            background-color: var(--card);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        
+        .app-card:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px var(--shadow);
+        }
+        
+        .app-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: var(--secondary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+            z-index: 2;
+        }
+        
+        .app-icon {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .app-info {
+            padding: 12px;
+        }
+        
+        .app-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .app-developer {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .app-rating {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .stars {
+            color: #ffb300;
+            font-size: 0.85rem;
+        }
+        
+        .price {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .free {
+            color: var(--secondary);
+        }
+        
+        /* Menú de categorías */
+        .categories {
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 5px 0 15px 0;
+            margin-bottom: 20px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .category {
+            background-color: white;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        .category.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Menú inferior */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid var(--border);
+            max-width: 500px;
+            margin: 0 auto;
+            z-index: 100;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            width: 20%;
+            padding: 5px 0;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+        
+        .nav-item.active {
+            color: var(--primary);
+        }
+        
+        .nav-item:active {
+            background-color: var(--tab-active);
+        }
+        
+        .nav-item i {
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+        }
+        
+        /* Banner promocional */
+        .promo-banner {
+            background: linear-gradient(to right, #ff6b6b, #ff8e53);
+            border-radius: 14px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .promo-banner::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+        
+        .promo-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .promo-text {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            max-width: 70%;
+        }
+        
+        .promo-button {
+            background-color: white;
+            color: #ff6b6b;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
