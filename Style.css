@@ -52,8 +52,8 @@ p* {
         }
         
         .logo img:last-child {
-    width: 75px; /* Ajusta el tamaño del icono */
-    height: 25px; /* Mantiene la proporción */
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción */
         }
         
         .header-actions {
