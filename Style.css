@@ -53,7 +53,7 @@ p* {
         
         .logo img:last-child {
     width: 75px; /* Ajusta el tamaño del icono */
-    height: 25; /* Mantiene la proporción */
+    height: 25px; /* Mantiene la proporción */
         }
         
         .header-actions {
