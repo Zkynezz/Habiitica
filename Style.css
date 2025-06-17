@@ -54,7 +54,7 @@
         .logo img:last-child {
     width: 50px; /* Ajusta el tamaño del icono */
     height: auto; /* Mantiene la proporción */
-}
+        }
         
         .header-actions {
             display: flex;
