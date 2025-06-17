@@ -52,7 +52,7 @@
         }
         
         .logo img:last-child {
-    width: 100px; /* Ajusta el tamaño del icono */
+    width: 1000px; /* Ajusta el tamaño del icono */
     height: auto; /* Mantiene la proporción */
 }
         
