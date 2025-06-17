@@ -21,7 +21,7 @@ p* {
             background-color: var(--background);
             color: var(--text);
             padding-bottom: 70px; /* Espacio para el menú inferior */
-            padding: 10px 200px; / Modifica el espacio interno /
+            padding: 50px 16px; / Modifica el espacio interno /
             overflow-x: hidden;
             max-width: 500px;
             margin: 0 auto;
