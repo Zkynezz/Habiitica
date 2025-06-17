@@ -21,7 +21,6 @@ p* {
             background-color: var(--background);
             color: var(--text);
             padding-bottom: 70px; /* Espacio para el menú inferior */
-            padding: 50px 16px; / Modifica el espacio interno /
             overflow-x: hidden;
             max-width: 500px;
             margin: 0 auto;
@@ -53,7 +52,7 @@ p* {
         }
         
         .logo img:last-child {
-    width: 50px; /* Ajusta el tamaño del icono */
+    width: 25px; /* Ajusta el tamaño del icono */
     height: auto; /* Mantiene la proporción */
         }
         
