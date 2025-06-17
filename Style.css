@@ -21,6 +21,8 @@ p* {
             background-color: var(--background);
             color: var(--text);
             padding-bottom: 70px; /* Espacio para el menú inferior */
+            height: 60px; / Ajusta la altura según lo necesites /
+            padding: 10px 20px; / Modifica el espacio interno /
             overflow-x: hidden;
             max-width: 500px;
             margin: 0 auto;
@@ -33,7 +35,7 @@ p* {
         header {
             background: linear-gradient(to right, var(--primary), #0066ff);
             color: white;
-            padding: 15px 100px;
+            padding: 15px 16px;
             position: sticky;
             top: 0;
             z-index: 100;
