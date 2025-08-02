@@ -31,7 +31,7 @@
             text-decoration: none;
             -webkit-tap-highlight-color: transparent;
         }
-        
+        /* PAGINAL PRINCIPAL CON EL MENU INFERIOR */
         /* Barra de navegación superior */
         .top-nav {
             background-color: #2c3e50;
@@ -137,4 +137,100 @@
         .nav-item.active .nav-icon,
         .nav-item.active {
             color: #3498db;
+        }
+
+        /* AREA DE NOTICIAS*/
+        /* Estilos para la sección de noticias */
+        .news-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--color-nav-border);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--color-card-title);
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .news-card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-category {
+            display: inline-block;
+            color: var(--color-icon);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .news-title {
+            color: var(--color-card-title);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            color: var(--color-card-text);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--color-card-text);
+        }
+
+        .news-date {
+            display: flex;
+            align-items: center;
+        }
+
+        .news-date i {
+            color: var(--color-icon);
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
         }
